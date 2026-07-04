@@ -1,0 +1,77 @@
+import random
+
+print("=" * 50)
+print("        Welcome to MoodMate AI Chatbot")
+print("=" * 50)
+
+name = input("Enter your name: ")
+print(f"\nHello {name}! I am MoodMate.")
+print("You can talk to me about your mood, studies, or ask for motivation.")
+print("Type 'exit' anytime to end the conversation.\n")
+
+motivational_quotes = [
+    "Success is the result of small efforts repeated every day.",
+    "Believe in yourself. You can achieve great things.",
+    "Do not stop until you are proud of yourself.",
+    "Every expert was once a beginner.",
+    "Your future is created by what you do today."
+]
+
+jokes = [
+    "Why do programmers prefer dark mode? Because light attracts bugs!",
+    "Why was Python so popular? Because it had great readability!",
+    "Why did the computer get cold? Because it left its Windows open!"
+]
+
+while True:
+    message = input(f"{name}: ").lower()
+
+    if message == "exit":
+        print("MoodMate: Goodbye! Have a wonderful day.")
+        break
+
+    elif "hello" in message or "hi" in message:
+        print(f"MoodMate: Hello {name}! How are you feeling today?")
+
+    elif "happy" in message:
+        print("MoodMate: That's amazing! Keep spreading positivity.")
+
+    elif "sad" in message:
+        print("MoodMate: Tough days happen. Remember that difficult moments don't last forever.")
+
+    elif "angry" in message:
+        print("MoodMate: Taking a short break or listening to music may help you relax.")
+
+    elif "stress" in message or "stressed" in message:
+        print("MoodMate: Try focusing on one task at a time. You can do it!")
+
+    elif "motivate" in message or "motivation" in message:
+        print("MoodMate:", random.choice(motivational_quotes))
+
+    elif "exam" in message or "study" in message:
+        print("MoodMate: Stay consistent with your studies. Small daily progress leads to big results.")
+
+    elif "joke" in message:
+        print("MoodMate:", random.choice(jokes))
+
+    elif "thank" in message:
+        print("MoodMate: You're welcome!")
+
+    elif "how are you" in message:
+        print("MoodMate: I'm doing great and ready to help you!")
+
+    elif "your name" in message:
+        print("MoodMate: I am MoodMate AI, your virtual companion.")
+
+    elif "favorite subject" in message:
+        print("MoodMate: I enjoy Python because it is simple and powerful!")
+
+    else:
+        responses = [
+            "Interesting! Tell me more.",
+            "I understand. Please continue.",
+            "That sounds important to you.",
+            "I'm listening.",
+            "Could you tell me more about that?"
+        ]
+        print("MoodMate:", random.choice(responses))
